@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>August 2024 Workshop Day II</title>
   <link rel="stylesheet" href="fictitious.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 </head>
 <body>
   <header>
     <!-- NOTE: the nav and skip link, and landmark components don't have their own section but are included here in this demo -->
+    <a href="#main" class="Skip">Skip to main content</a>
     <nav>
       <div class="Logo">Fictitious UI</div>
       <ul>
@@ -33,9 +39,12 @@
       </ul>
     </nav>
   </header>
-  <main tabindex="-1">
-    <h1>Fictitious UI</h1>
-    <p>The totally real component library!</p>
+
+  <main id="main" tabindex="-1">
+    <div class="Hero">
+      <h1>Fictitious UI</h1>
+      <p>The totally real component library!</p>
+    </div>
     
     <section id="headings" tabindex="-1">
       <h2>Headings</h2>
@@ -49,7 +58,7 @@
 
     <section id="buttons" tabindex="-1">
       <h2>Buttons</h2>
-      <button>Primary</button>
+      <button class="Button__primary">Primary</button>
       <button class="Button__secondary">Secondary</button>
       <button disabled>Disabled</button>
       <button aria-pressed="true">Pressed</button>
@@ -57,8 +66,8 @@
 
     <section id="links" tabindex="-1">
       <h2>Links</h2>
-      <a href="#">Link</a>
-      <p>Here is a <a href="#">descriptive link</a> within a paragraph of text</p>
+      <a href="#" class="Link">Link</a>
+      <p>Here is a <a class="Link" href="#">descriptive link</a> within a paragraph of text</p>
     </section>
 
     <section id="forms" tabindex="-1">
@@ -97,7 +106,6 @@
 
     <section id="accordions" tabindex="-1">
       <h2>Accordions</h2>
-
       <div class="Accordion">
         <h3>
           <button
@@ -115,9 +123,11 @@
       </div>
     </section>
   </main>
+
   <footer>
     <p>Fictitious UI&#169;</p>
   </footer>
+
   <script src="fictitious.js"></script>
 </body>
 </html>

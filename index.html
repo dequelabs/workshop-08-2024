@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>August 2024 Workshop Day II</title>
+  <link rel="stylesheet" href="fictitious.css">
+</head>
+<body>
+  <header>
+    <!-- NOTE: the nav and skip link, and landmark components don't have their own section but are included here in this demo -->
+    <nav>
+      <div class="Logo">Fictitious UI</div>
+      <ul>
+        <li>
+          <a href="#headings">Headings</a>
+        </li>
+        <li>
+          <a href="#buttons">Buttons</a>
+        </li>
+        <li>
+          <a href="#links">Links</a>
+        </li>
+        <li>
+          <a href="#forms">Forms</a>
+        </li>
+        <li>
+          <a href="#tabs">Tabs</a>
+        </li>
+        <li>
+          <a href="#accordions">Accordions</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main tabindex="-1">
+    <h1>Fictitious UI</h1>
+    <p>The totally real component library!</p>
+    
+    <section id="headings" tabindex="-1">
+      <h2>Headings</h2>
+      <h1>Heading level 1</h1>
+      <h2>Heading level 2</h2>
+      <h3>Heading level 3</h3>
+      <h4>Heading level 4</h4>
+      <h5>Heading level 5</h5>
+      <h6>Heading level 6</h6>
+    </section>
+
+    <section id="buttons" tabindex="-1">
+      <h2>Buttons</h2>
+      <button>Primary</button>
+      <button class="Button__secondary">Secondary</button>
+      <button disabled>Disabled</button>
+      <button aria-pressed="true">Pressed</button>
+    </section>
+
+    <section id="links" tabindex="-1">
+      <h2>Links</h2>
+      <a href="#">Link</a>
+      <p>Here is a <a href="#">descriptive link</a> within a paragraph of text</p>
+    </section>
+
+    <section id="forms" tabindex="-1">
+      <h2>Forms</h2>
+    </section>
+
+    <section id="tabs" tabindex="-1">
+      <h2>Tabs</h2>
+      <div class="Tabs">
+        <h3 id="tab-example">Tablist Example</h3>
+        <div role="tablist" aria-labelledby="tab-example">
+          <button id="tab-1" role="tab" aria-selected="true" aria-controls="panel-1">
+            Tab 1
+          </button>
+          <button id="tab-2" role="tab" aria-selected="true" aria-controls="panel-2">
+            Tab 2
+          </button>
+          <button id="tab-3" role="tab" aria-selected="true" aria-controls="panel-3">
+            Tab 3
+          </button>
+        </div>
+        <div role="tabpanel" tabindex="-1" id="panel-1" aria-labelledby="tab-1" class="Panel--active">
+          <h4>Panel 1</h4>
+          <p>This is some content in panel 1. The tablist component is awesome and stuff!</p>
+        </div>
+        <div role="tabpanel" tabindex="-1" id="panel-2" aria-labelledby="tab-2">
+          <h4>Panel 2</h4>
+          <p>This is some content in panel 2. The tablist component is awesome and stuff!</p>
+        </div>
+        <div role="tabpanel" tabindex="-1" id="panel-3" aria-labelledby="tab-3">
+          <h4>Panel 3</h4>
+          <p>This is some content in panel 3. The tablist component is awesome and stuff!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="accordions" tabindex="-1">
+      <h2>Accordions</h2>
+
+      <div class="Accordion">
+        <h3>
+          <button
+            id="terms-trigger"
+            aria-expanded="false"
+            aria-controls="terms-panel"
+            class="Accordion__trigger">
+            Product trial terms and conditions
+          </button>
+        </h3>
+        <div id="terms-panel" role="region" class="Accordion__panel">
+          <h4>Terms &amp; Conditions</h4>
+          <p>Our terms and conditions are conditional based on the terms documented in our terms sheet.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Fictitious UI&#169;</p>
+  </footer>
+  <script src="fictitious.js"></script>
+</body>
+</html>

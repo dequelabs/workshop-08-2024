@@ -122,7 +122,7 @@ button {
 }
 
 button:hover:not(:disabled) {
-  border: 2px solid currentColor !important;
+  border: 2px solid currentColor;
 }
 
 button:focus {
@@ -190,4 +190,40 @@ button[aria-pressed="true"] {
 
 .Notification--active {
   display: inline-block;
+}
+
+/************
+ * TABLISTS *
+ ************
+ */
+
+.Tabs [role="tablist"] {
+  border-bottom: 1px solid var(--dark-gray);
+}
+
+.Tabs button {
+  box-shadow: none;
+  background: transparent;
+  border: 3px solid transparent;
+  padding: .5em 2em;
+  font-size: 1em;
+}
+
+.Tabs button[aria-selected="true"] {
+  border-bottom: 3px solid var(--accent-light);
+}
+
+.Tabs button:hover,
+.Tabs button:focus:not([aria-selected="true"]) {
+  border: 3px solid transparent;
+  border-bottom: 3px solid var(--dark-gray);
+  color: var(--dark-gray);
+}
+
+[role="tabpanel"] {
+  display: none;
+}
+
+[role="tabpanel"].Panel--active {
+  display: block;
 }

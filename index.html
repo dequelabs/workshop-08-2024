@@ -124,13 +124,28 @@
       <div class="Tabs">
         <h3 id="tab-example">Tablist Example</h3>
         <div role="tablist" aria-labelledby="tab-example">
-          <button id="tab-1" role="tab" aria-selected="true" aria-controls="panel-1">
+          <button
+            id="tab-1"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-1"
+            tabindex="0">
             Tab 1
           </button>
-          <button id="tab-2" role="tab" aria-selected="true" aria-controls="panel-2">
+          <button
+            id="tab-2"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            tabindex="-1">
             Tab 2
           </button>
-          <button id="tab-3" role="tab" aria-selected="true" aria-controls="panel-3">
+          <button 
+            id="tab-3" 
+            role="tab" 
+            aria-selected="false" 
+            aria-controls="panel-3" 
+            tabindex="-1">
             Tab 3
           </button>
         </div>
@@ -176,5 +191,6 @@
   </footer>
 
   <script src="forms.js"></script>
+  <script src="tabs.js"></script>
 </body>
 </html>

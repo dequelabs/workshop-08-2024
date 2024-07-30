@@ -220,10 +220,51 @@ button[aria-pressed="true"] {
   color: var(--dark-gray);
 }
 
-[role="tabpanel"] {
+[role="tabpanel"],
+.Accordion__panel {
   display: none;
 }
 
-[role="tabpanel"].Panel--active {
+.Panel--active {
   display: block;
+}
+
+/**************
+ * ACCORDIONS *
+ **************
+ */
+
+.Accordion__trigger {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  box-shadow: none;
+  font-size: 1em;
+  width: 100%;
+  border: 0;
+}
+
+.Accordion .Accordion__item .Accordion__trigger:hover {
+  border: 0;
+  background: var(--light-gray);
+}
+
+.Accordion__item {
+  border-top: 1px solid var(--gray);
+}
+
+.Accordion__item--last {
+  border-bottom: 1px solid var(--gray);
+}
+
+.Accordion__item h4 {
+  margin: 0;
+}
+
+.Accordion__trigger--expanded .icon {
+  transform: rotate(180deg);
+}
+
+.Accordion__panel {
+  padding: 0 1em;
 }

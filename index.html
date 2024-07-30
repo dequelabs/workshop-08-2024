@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>August 2024 Workshop Day II</title>
+  <title>Workshop Day II (August 2024)</title>
   <link rel="stylesheet" href="fictitious.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,7 @@
   <main id="main" tabindex="-1">
     <div class="Hero">
       <h1>Fictitious UI</h1>
-      <p>The totally real component library!</p>
+      <p>The unreal component library!</p>
     </div>
     
     <section id="headings" tabindex="-1">
@@ -72,6 +72,51 @@
 
     <section id="forms" tabindex="-1">
       <h2>Forms</h2>
+      <h3>Personal Profile</h3>
+      <p><em>All fields are required unless otherwise indicated.</em></p>
+      <form novalidate>
+        <!-- fix me! (make accessible to AT) -->
+        <div class="Notification--info">
+          Profile updated successfully
+        </div>
+        <div class="Field">
+          <label>First name</label>
+          <input type="text" id="first" />
+          <div class="Error">First name is required</div>
+        </div>
+        <div class="Field">
+          <label>Last name</label>
+          <input type="text" id="last" />
+          <div class="Error">Last name is required</div>
+        </div>
+        <div class="Field">
+          <label>Email</label>
+          <input type="text" id="email" />
+          <div class="Error">A valid email address is required</div>
+        </div>
+        <div class="Field">
+          <label>Date of birth (optional)</label>
+          <input type="date" id="dob" />
+        </div>
+        
+        <!-- fix me! -->
+        <div class="RadioGroup">
+          <div class="RadioGroup__label">Notification preferences</div>
+          <label>
+            <input type="radio" checked name="notification" value="none" />
+            <span>None</span>
+          </label>
+          <label>
+            <input type="radio" name="notification" value="important" />
+            <span>Important stuff only</span>
+          </label>
+          <label>
+            <input type="radio" name="notification" value="all" />
+            <span>All</span>
+          </label>
+        </div>
+        <button class="Button__primary">Submit</button>
+      </form>
     </section>
 
     <section id="tabs" tabindex="-1">
@@ -122,12 +167,14 @@
         </div>
       </div>
     </section>
+
+    <!-- TODO: Add examples of things we want to cover (illogical tab order, keyboard traps, etc.) -->
   </main>
 
   <footer>
     <p>Fictitious UI&#169;</p>
   </footer>
 
-  <script src="fictitious.js"></script>
+  <script src="forms.js"></script>
 </body>
 </html>

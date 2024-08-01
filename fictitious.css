@@ -244,6 +244,10 @@ button[aria-pressed="true"] {
   border: 0;
 }
 
+.Accordion__trigger:focus {
+  outline: 0;
+}
+
 .Accordion .Accordion__item .Accordion__trigger:hover {
   border: 0;
   background: var(--light-gray);

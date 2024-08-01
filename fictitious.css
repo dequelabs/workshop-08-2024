@@ -1,5 +1,5 @@
 :root {
-  --accent-primary: #054A91;
+  --accent-primary: #3c8ee1;
   --accent-light: #FF6B6C;
   --dark: #151515;
   --dark-gray: #292929;
@@ -176,7 +176,7 @@ button[aria-pressed="true"] {
 }
 
 /*****************
- * Notifications *
+ * NOTIFICATIONS *
  *****************
  */
 
@@ -267,4 +267,53 @@ button[aria-pressed="true"] {
 
 .Accordion__panel {
   padding: 0 1em;
+}
+
+/*********
+ * CARDS *
+ *********
+ */
+
+.Card {
+  max-width: 420px;
+  border: 1px solid var(--gray);
+  box-shadow: 0 0 1px;
+  border-radius: 3px;
+  margin: 1em;
+  text-align: center;
+}
+
+.Card__actions {
+  border-bottom: 1px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: .75em;
+}
+
+.Card__actions button {
+  padding: 0 .5em;
+  display: flex;
+  align-items: center;
+}
+
+.Card__title {
+  padding: .75em;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.Card__body {
+  padding: .75em;
+}
+
+/*********
+ * CARDS *
+ *********
+ */
+
+footer {
+  text-align: center;
+  background: var(--dark);
+  color: #fff;
+  padding: 2em;
 }

@@ -12,6 +12,10 @@
     rel="stylesheet">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
   <header>
@@ -37,6 +41,9 @@
         </li>
         <li>
           <a href="#accordions">Accordions</a>
+        </li>
+        <li>
+          <a href="#cards">Cards</a>
         </li>
       </ul>
     </nav>
@@ -257,7 +264,60 @@
       </div>
     </section>
 
-    <!-- TODO: Add examples of things we want to cover (illogical tab order, keyboard traps, etc.) -->
+    <section id="cards" tabindex="-1">
+      <h2>Cards</h2>
+      
+      <div class="Card">
+        <div class="Card__actions">
+          <button class="Button__secondary">
+            <span class="material-symbols-outlined" aria-hidden="true">
+              thumb_up
+            </span>
+            Like
+          </button>
+          <button class="Button__secondary">
+            <span class="material-symbols-outlined" aria-hidden="true">
+              flag
+            </span>
+            Report
+          </button>
+        </div>
+        <div class="Card__title">
+          <h3>
+            <a href="#" class="Link">Check out this picture of my cat!</a>
+          </h3>
+        </div>
+        <div class="Card__body">
+          <img src="https://loremflickr.com/320/240" alt="User Uploaded Image 901385" />
+          <p>I love my cat and stuff</p>
+        </div>
+      </div>
+
+      <div class="Card">
+        <div class="Card__actions">
+          <button class="Button__secondary">
+            <span class="material-symbols-outlined" aria-hidden="true">
+              thumb_up
+            </span>
+            Like
+          </button>
+          <button class="Button__secondary">
+            <span class="material-symbols-outlined" aria-hidden="true">
+              flag
+            </span>
+            Report
+          </button>
+        </div>
+        <div class="Card__title">
+          <h3>
+            <a href="#" class="Link">I am excited to announce a career change</a>
+          </h3>
+        </div>
+        <div class="Card__body">
+          <p>I have finally been promoted to team lead! After years and years of blood, sweat, and tears, I am being recognized for all my hard work.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>

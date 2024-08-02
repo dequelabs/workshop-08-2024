@@ -18,314 +18,327 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-  <header>
-    <!-- NOTE: the nav and skip link, and landmark components don't have their own section but are included here in this demo -->
-    <a href="#main" class="Skip">Skip to main content</a>
-    <nav>
-      <div class="Logo">Fictitious UI</div>
-      <ul>
-        <li>
-          <a href="#headings">Headings</a>
-        </li>
-        <li>
-          <a href="#buttons">Buttons</a>
-        </li>
-        <li>
-          <a href="#links">Links</a>
-        </li>
-        <li>
-          <a href="#forms">Forms</a>
-        </li>
-        <li>
-          <a href="#tabs">Tabs</a>
-        </li>
-        <li>
-          <a href="#accordions">Accordions</a>
-        </li>
-        <li>
-          <a href="#cards">Cards</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div class="App">
+    <header>
+      <!-- NOTE: the nav and skip link, and landmark components don't have their own section but are included here in this demo -->
+      <a href="#main" class="Skip">Skip to main content</a>
+      <nav>
+        <div class="Logo">Fictitious UI</div>
+        <ul>
+          <li>
+            <a href="#headings">Headings</a>
+          </li>
+          <li>
+            <a href="#buttons">Buttons</a>
+          </li>
+          <li>
+            <a href="#links">Links</a>
+          </li>
+          <li>
+            <a href="#forms">Forms</a>
+          </li>
+          <li>
+            <a href="#tabs">Tabs</a>
+          </li>
+          <li>
+            <a href="#accordions">Accordions</a>
+          </li>
+          <li>
+            <a href="#cards">Cards</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <main id="main" tabindex="-1">
-    <div class="Hero">
-      <h1>Fictitious UI</h1>
-      <p>The unreal component library!</p>
-    </div>
-    
-    <section id="headings" tabindex="-1">
-      <h2>Headings</h2>
-      <h1>Heading level 1</h1>
-      <h2>Heading level 2</h2>
-      <h3>Heading level 3</h3>
-      <h4>Heading level 4</h4>
-      <h5>Heading level 5</h5>
-      <h6>Heading level 6</h6>
-    </section>
-
-    <section id="buttons" tabindex="-1">
-      <h2>Buttons</h2>
-      <button class="Button__primary">Primary</button>
-      <button class="Button__secondary">Secondary</button>
-      <button disabled>Disabled</button>
-      <button aria-pressed="true">Pressed</button>
-    </section>
-
-    <section id="links" tabindex="-1">
-      <h2>Links</h2>
-      <a href="#" class="Link">Link</a>
-      <p>Here is a <a class="Link" href="#">descriptive link</a> within a paragraph of text</p>
-    </section>
-
-    <section id="forms" tabindex="-1">
-      <h2>Forms</h2>
-      <h3>Personal Profile</h3>
-      <p><em>All fields are required unless otherwise indicated.</em></p>
-      <form novalidate>
-        <!-- fix me! (make accessible to AT) -->
-        <div class="Notification--info">
-          Profile updated successfully
-        </div>
-        <div class="Field">
-          <label>First name</label>
-          <input type="text" id="first" />
-          <div id="first-error" class="Error">First name is required</div>
-        </div>
-        <div class="Field">
-          <label>Last name</label>
-          <input type="text" id="last" />
-          <div id="last-error" class="Error">Last name is required</div>
-        </div>
-        <div class="Field">
-          <label>Email</label>
-          <input type="text" id="email" />
-          <div id="email-error" class="Error">A valid email address is required</div>
-        </div>
-        <div class="Field">
-          <label>Date of birth (optional)</label>
-          <input type="date" id="dob" />
-        </div>
-        
-        <!-- fix me! -->
-        <div class="RadioGroup">
-          <div class="RadioGroup__label">Notification preferences</div>
-          <label>
-            <input type="radio" checked name="notification" value="none" />
-            <span>None</span>
-          </label>
-          <label>
-            <input type="radio" name="notification" value="important" />
-            <span>Important stuff only</span>
-          </label>
-          <label>
-            <input type="radio" name="notification" value="all" />
-            <span>All</span>
-          </label>
-        </div>
-        <button class="Button__primary">Submit</button>
-      </form>
-    </section>
-
-    <section id="tabs" tabindex="-1">
-      <h2>Tabs</h2>
-      <div class="Tabs">
-        <h3 id="tab-example">Tablist Example</h3>
-        <div role="tablist" aria-labelledby="tab-example">
-          <button
-            id="tab-1"
-            role="tab"
-            aria-selected="true"
-            aria-controls="panel-1"
-            tabindex="0">
-            Tab 1
-          </button>
-          <button
-            id="tab-2"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-2"
-            tabindex="-1">
-            Tab 2
-          </button>
-          <button 
-            id="tab-3" 
-            role="tab" 
-            aria-selected="false" 
-            aria-controls="panel-3" 
-            tabindex="-1">
-            Tab 3
-          </button>
-        </div>
-        <div 
-          role="tabpanel" 
-          tabindex="-1" 
-          id="panel-1" 
-          aria-labelledby="tab-1"
-          class="Panel--active"
-        >
-          <h4>Panel 1</h4>
-          <p>This is some content in panel 1. The tablist component is awesome and stuff!</p>
-        </div>
-        <div 
-          role="tabpanel" 
-          tabindex="-1" 
-          id="panel-2" 
-          aria-labelledby="tab-2"
-        >
-          <h4>Panel 2</h4>
-          <p>This is some content in panel 2. The tablist component is awesome and stuff!</p>
-        </div>
-        <div 
-          role="tabpanel" 
-          tabindex="-1" 
-          id="panel-3" 
-          aria-labelledby="tab-3"
-        >
-          <h4>Panel 3</h4>
-          <p>This is some content in panel 3. The tablist component is awesome and stuff!</p>
-        </div>
+    <main id="main" tabindex="-1">
+      <div class="Hero">
+        <h1>Fictitious UI</h1>
+        <p>The unreal component library!</p>
       </div>
-    </section>
-
-    <section id="accordions" tabindex="-1">
-      <h2>Accordions</h2>
-      <h3>FAQs</h3>
-      <div class="Accordion">
-        <div class="Accordion__item">
-          <h4>
-            <button
-              id="included-trigger"
-              aria-controls="included-panel"
-              class="Accordion__trigger"
-            >
-              <span>What is included?</span>
-              <span class="icon material-symbols-outlined" aria-hidden="true">
-                keyboard_arrow_down
-              </span>
-            </button>
-          </h4>
-          <div
-            id="included-panel"
-            role="region"
-            class="Accordion__panel"
-            aria-labelledby="included-trigger"
-          >
-            <p>A better question would be what isn't included...A lot of stuff/things/such are included.</p>
-          </div>
-        </div>
-
-        <div class="Accordion__item">
-          <h4>
-            <button
-              id="issue-trigger"
-              aria-controls="issue-panel"
-              class="Accordion__trigger"
-            >
-              <span>How do I report an issue?</span>
-              <span class="icon material-symbols-outlined" aria-hidden="true">
-                keyboard_arrow_down
-              </span>
-            </button>
-          </h4>
-          <div
-            id="issue-panel"
-            role="region"
-            class="Accordion__panel"
-            aria-labelledby="issue-trigger"
-          >
-            <p>You will never experience any issues with our flawless software so no need to answer this question.</p>
-          </div>
-        </div>
-
-        <div class="Accordion__item Accordion__item--last">
-          <h4>
-            <button
-              id="feedback-trigger"
-              aria-controls="feedback-panel"
-              class="Accordion__trigger"
-            >
-              <span>How can I provide feedback?</span>
-              <span class="icon material-symbols-outlined" aria-hidden="true">
-                keyboard_arrow_down
-              </span>
-            </button>
-          </h4>
-          <div
-            id="feedback-panel"
-            role="region"
-            class="Accordion__panel"
-            aria-labelledby="feedback-trigger"
-          >
-            <p>We appreciate feedback from all of our users. If you have any feedback for us just climb to a mountain top and shout it. One of our sales associates will hear it and relay it on to our development team.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cards" tabindex="-1">
-      <h2>Cards</h2>
       
-      <div class="Card">
-        <div class="Card__actions">
-          <button class="Button__secondary">
-            <span class="material-symbols-outlined" aria-hidden="true">
-              thumb_up
-            </span>
-            Like
-          </button>
-          <button class="Button__secondary">
-            <span class="material-symbols-outlined" aria-hidden="true">
-              flag
-            </span>
-            Report
-          </button>
-        </div>
-        <div class="Card__title">
-          <h3>
-            <a href="#" class="Link">Check out this picture of my cat!</a>
-          </h3>
-        </div>
-        <div class="Card__body">
-          <img src="https://loremflickr.com/320/240" alt="User Uploaded Image 901385" />
-          <p>I love my cat and stuff</p>
-        </div>
-      </div>
+      <section id="headings" tabindex="-1">
+        <h2>Headings</h2>
+        <h1>Heading level 1</h1>
+        <h2>Heading level 2</h2>
+        <h3>Heading level 3</h3>
+        <h4>Heading level 4</h4>
+        <h5>Heading level 5</h5>
+        <h6>Heading level 6</h6>
+      </section>
 
-      <div class="Card">
-        <div class="Card__actions">
-          <button class="Button__secondary">
-            <span class="material-symbols-outlined" aria-hidden="true">
-              thumb_up
-            </span>
-            Like
-          </button>
-          <button class="Button__secondary">
-            <span class="material-symbols-outlined" aria-hidden="true">
-              flag
-            </span>
-            Report
-          </button>
-        </div>
-        <div class="Card__title">
-          <h3>
-            <a href="#" class="Link">I am excited to announce a career change</a>
-          </h3>
-        </div>
-        <div class="Card__body">
-          <p>I have finally been promoted to team lead! After years and years of blood, sweat, and tears, I am being recognized for all my hard work.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+      <section id="buttons" tabindex="-1">
+        <h2>Buttons</h2>
+        <button class="Button__primary">Primary</button>
+        <button class="Button__secondary">Secondary</button>
+        <button disabled>Disabled</button>
+        <button aria-pressed="true">Pressed</button>
+      </section>
 
-  <footer>
-    <p>Fictitious UI&#169;</p>
-  </footer>
+      <section id="links" tabindex="-1">
+        <h2>Links</h2>
+        <a href="#" class="Link">Link</a>
+        <p>Here is a <a class="Link" href="#">descriptive link</a> within a paragraph of text</p>
+      </section>
+
+      <section id="forms" tabindex="-1">
+        <h2>Forms</h2>
+        <h3>Personal Profile</h3>
+        <p><em>All fields are required unless otherwise indicated.</em></p>
+        <form novalidate>
+          <!-- fix me! (make accessible to AT) -->
+          <div class="Notification--info">
+            Profile updated successfully
+          </div>
+          <div class="Field">
+            <label>First name</label>
+            <input type="text" id="first" />
+            <div id="first-error" class="Error">First name is required</div>
+          </div>
+          <div class="Field">
+            <label>Last name</label>
+            <input type="text" id="last" />
+            <div id="last-error" class="Error">Last name is required</div>
+          </div>
+          <div class="Field">
+            <label>Email</label>
+            <input type="text" id="email" />
+            <div id="email-error" class="Error">A valid email address is required</div>
+          </div>
+          <div class="Field">
+            <label>Date of birth (optional)</label>
+            <input type="date" id="dob" />
+          </div>
+          
+          <!-- fix me! -->
+          <div class="RadioGroup">
+            <div class="RadioGroup__label">Notification preferences</div>
+            <label>
+              <input type="radio" checked name="notification" value="none" />
+              <span>None</span>
+            </label>
+            <label>
+              <input type="radio" name="notification" value="important" />
+              <span>Important stuff only</span>
+            </label>
+            <label>
+              <input type="radio" name="notification" value="all" />
+              <span>All</span>
+            </label>
+          </div>
+          <button class="Button__primary">Submit</button>
+        </form>
+      </section>
+
+      <section id="tabs" tabindex="-1">
+        <h2>Tabs</h2>
+        <div class="Tabs">
+          <h3 id="tab-example">Tablist Example</h3>
+          <div role="tablist" aria-labelledby="tab-example">
+            <button
+              id="tab-1"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-1"
+              tabindex="0">
+              Tab 1
+            </button>
+            <button
+              id="tab-2"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-2"
+              tabindex="-1">
+              Tab 2
+            </button>
+            <button 
+              id="tab-3" 
+              role="tab" 
+              aria-selected="false" 
+              aria-controls="panel-3" 
+              tabindex="-1">
+              Tab 3
+            </button>
+          </div>
+          <div 
+            role="tabpanel" 
+            tabindex="-1" 
+            id="panel-1" 
+            aria-labelledby="tab-1"
+            class="Panel--active"
+          >
+            <h4>Panel 1</h4>
+            <p>This is some content in panel 1. The tablist component is awesome and stuff!</p>
+          </div>
+          <div 
+            role="tabpanel" 
+            tabindex="-1" 
+            id="panel-2" 
+            aria-labelledby="tab-2"
+          >
+            <h4>Panel 2</h4>
+            <p>This is some content in panel 2. The tablist component is awesome and stuff!</p>
+          </div>
+          <div 
+            role="tabpanel" 
+            tabindex="-1" 
+            id="panel-3" 
+            aria-labelledby="tab-3"
+          >
+            <h4>Panel 3</h4>
+            <p>This is some content in panel 3. The tablist component is awesome and stuff!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="accordions" tabindex="-1">
+        <h2>Accordions</h2>
+        <h3>FAQs</h3>
+        <div class="Accordion">
+          <div class="Accordion__item">
+            <h4>
+              <button
+                id="included-trigger"
+                aria-controls="included-panel"
+                class="Accordion__trigger"
+              >
+                <span>What is included?</span>
+                <span class="icon material-symbols-outlined" aria-hidden="true">
+                  keyboard_arrow_down
+                </span>
+              </button>
+            </h4>
+            <div
+              id="included-panel"
+              role="region"
+              class="Accordion__panel"
+              aria-labelledby="included-trigger"
+            >
+              <p>A better question would be what isn't included...A lot of stuff/things/such are included.</p>
+            </div>
+          </div>
+
+          <div class="Accordion__item">
+            <h4>
+              <button
+                id="issue-trigger"
+                aria-controls="issue-panel"
+                class="Accordion__trigger"
+              >
+                <span>How do I report an issue?</span>
+                <span class="icon material-symbols-outlined" aria-hidden="true">
+                  keyboard_arrow_down
+                </span>
+              </button>
+            </h4>
+            <div
+              id="issue-panel"
+              role="region"
+              class="Accordion__panel"
+              aria-labelledby="issue-trigger"
+            >
+              <p>You will never experience any issues with our flawless software so no need to answer this question.</p>
+            </div>
+          </div>
+
+          <div class="Accordion__item Accordion__item--last">
+            <h4>
+              <button
+                id="feedback-trigger"
+                aria-controls="feedback-panel"
+                class="Accordion__trigger"
+              >
+                <span>How can I provide feedback?</span>
+                <span class="icon material-symbols-outlined" aria-hidden="true">
+                  keyboard_arrow_down
+                </span>
+              </button>
+            </h4>
+            <div
+              id="feedback-panel"
+              role="region"
+              class="Accordion__panel"
+              aria-labelledby="feedback-trigger"
+            >
+              <p>We appreciate feedback from all of our users. If you have any feedback for us just climb to a mountain top and shout it. One of our sales associates will hear it and relay it on to our development team.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cards" tabindex="-1">
+        <h2>Cards</h2>
+        
+        <div class="Card">
+          <div class="Card__actions">
+            <button class="Button__secondary Like">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                thumb_up
+              </span>
+              Like
+            </button>
+            <button class="Button__secondary">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                flag
+              </span>
+              Report
+            </button>
+          </div>
+          <div class="Card__title">
+            <h3>
+              <a href="#" class="Link">Check out this picture of my cat!</a>
+            </h3>
+          </div>
+          <div class="Card__body">
+            <img src="https://loremflickr.com/320/240" alt="User Uploaded Image 901385" />
+            <p>I love my cat and stuff</p>
+          </div>
+        </div>
+
+        <div class="Card">
+          <div class="Card__actions">
+            <button class="Button__secondary Like">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                thumb_up
+              </span>
+              Like
+            </button>
+            <button class="Button__secondary">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                flag
+              </span>
+              Report
+            </button>
+          </div>
+          <div class="Card__title">
+            <h3>
+              <a href="#" class="Link">I am excited to announce a career change</a>
+            </h3>
+          </div>
+          <div class="Card__body">
+            <p>I have finally been promoted to team lead! After years and years of blood, sweat, and tears, I am being recognized for all my hard work.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Fictitious UI&#169;</p>
+    </footer>
+  </div>
+
+  <div class="ModalWrapper">
+    <div class="Scrim"></div>
+    <div class="Modal">
+      <h2>Are you sure you want to like this post?</h2>
+      <p>Liking this post will be visible to everyone in the world. Proceed with caution!</p>
+      <button class="Button__secondary Cancel">Cancel</button>
+      <button class="Button__primary Confirm">Confirm</button>
+    </div>
+  </div>
 
   <script src="forms.js"></script>
   <script src="tabs.js"></script>
   <script src="accordions.js"></script>
+  <script src="modals.js"></script>
 </body>
 </html>

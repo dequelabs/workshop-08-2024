@@ -326,3 +326,34 @@ footer {
   color: #fff;
   padding: 2em;
 }
+
+/**********
+ * MODALS *
+ **********
+ */
+
+.Modal {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  padding: 1em;
+  border: 2px solid var(--gray);
+}
+
+.Scrim {
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
+}
+
+.Modal--open .Modal,
+.Modal--open .Scrim {
+  display: block;
+}

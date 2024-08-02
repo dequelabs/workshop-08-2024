@@ -29,11 +29,11 @@ tabs.forEach((tab, index) => {
      * Handle the following keyboard interactions:
      * (based on https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-automatic/)
      *
-     * - Right Arrow (`key === "ArrowRight"`):
+     * - Right Arrow (`e.key === "ArrowRight"`):
      *     - Moves focus to the next tab.
      *     - If focus is on the last tab, moves focus to the first tab.
      *     - Activates the newly focused tab.
-     * - Left Arrow (`key === "ArrowLeft"`):
+     * - Left Arrow (`e.key === "ArrowLeft"`):
      *     - Moves focus to the previous tab.
      *     - If focus is on the first tab, moves focus to the last tab.
      *     - Activates the newly focused tab.
